@@ -1,0 +1,275 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, 'Open Sans', 'Helvetica Neue', sans-serif;
+    background-color: rgba(109, 109, 109, 0.3);
+    /* background-color: radial-gradient(50.53% 50.53% at 50.53% 49.47%, #414d59, #1d2631 100%); */
+}
+
+nav {
+    display: flex;
+    /* background-color: #37deff; */
+    justify-content: space-between;
+    background-color: #fff;
+    box-shadow: 0 2px 2px rgba(0, 0, 0, 0.7);
+}
+
+nav .logo, a{
+    margin: 20px 40px;
+}
+a{
+    display: block;
+    text-decoration: none;
+    /* color: rgba(255, 255, 255, 0.5); */
+    color: #9b9b9b;
+    transition: 0.5s;
+}
+
+a:hover {
+    color: black;
+    /* color: #fff; */
+
+}
+
+.logo {
+    margin-left: 15px;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-shadow: 2px 1px 1px grey;
+    font-size: 1.3em;
+    /* color: #fff; */
+    color: #292929;
+    cursor: pointer;
+}
+
+main {
+    width: 100%;
+    min-height: 600px;
+    display: flex;
+    justify-content: space-around;
+    align-items: start;
+}
+
+main .kalkulator {
+    width: 60%;
+    margin: 40px;
+    padding: 20px;
+}
+main .kalkulator h4 {
+    font-size: 2em;
+    margin-bottom: 20px;
+}
+
+main .kalkulator h4 span{
+    font-size: 2.1em;
+}
+
+.input-box{
+    width: 100%;
+    display: flex;
+    gap: 10px;
+}
+
+.sInput {
+    width: 50%;
+    position: relative;
+    /* background-color: blue; */
+}
+.sOutput {
+    width: 50%;
+    position: relative;
+    /* background-color: yellow; */
+}
+.empty-box {
+    width: 100px;
+    height: 40px;
+}
+
+.dropdown {
+    top: 0;
+    display: flex;
+    flex-direction: column;
+    position: absolute;
+    width: 100px;
+}
+
+.list-d {
+    position: relative;
+}
+
+.btn {
+    width: 100px;
+    height: 40px;
+    display: none;
+    background-color: rgb(150, 150, 150);
+    border: none;
+    border-radius: 10px;
+    color: #eaeaea;
+    text-align: start;
+    padding-left: 4px;
+}
+.btn2 {
+    padding-left: 4px;
+    text-align: start;
+    width: 100px;
+    height: 40px;
+    display: none;
+    background-color: rgb(150, 150, 150);
+    border: none;
+    border-radius: 10px;
+    color: #eaeaea;
+}
+
+button:hover {
+    cursor: pointer;
+}
+
+.active {
+    display: block;
+}
+
+.ngambang {
+    margin-top: 2px;
+    display: block;
+    margin-left: 10px;
+    z-index: 9;
+}
+
+.pointer {
+    position: absolute;
+    top: 0px;
+    right: 5%;
+    font-size: 1.5em;
+    transition: 0.55s;
+}
+
+.pointer2 {
+    position: absolute;
+    top: 0;
+    right: 5%;
+    font-size: 1.5em;
+    transition: 0.55s;
+}
+
+.pointer:hover {
+    cursor: pointer;
+    top: 5px;
+}
+.pointer2:hover {
+    cursor: pointer;
+    top: 5px;
+}
+
+.input-value{
+    margin-top: 10px;
+    /* background-color: red; */
+}
+
+#nInput, #nOutput {
+    font-size: 14px;
+    margin-bottom: 5px;
+}
+
+input{
+    width: 80%;
+    height: 40px;
+    outline: none;
+    border: none;
+    padding: 0 5px;
+    font-size: 0.8em;
+    border-radius: 10px;
+}
+
+input:disabled{
+    background-color: white;
+}
+
+#hitung{
+    border: none;
+    background: transparent;
+    border: 2px solid black;
+    color: black;
+    padding: 10px 20px;
+    font-weight: 600;
+    margin: 20px 0;
+    transition: .8s;
+    border-radius: 10px;
+}
+
+#hitung:hover{
+    background-color: black;
+    color: white;
+    cursor: pointer ;
+}
+
+main .info {
+    width: 40%;
+    background-color: rgb(255, 255, 255);
+    margin: 80px 80px 0 0;
+    padding: 20px;
+    height: 250px;
+    box-shadow: 2px 2px 2px rgba(0, 0, 0, 0.7);
+    overflow: auto;
+}
+
+.info .title{
+    text-align: center;
+    font-size: 1.3em;
+    font-weight: 600;
+    margin-bottom: 20px;
+}
+
+.info p {
+    text-align: justify;
+}
+
+@media screen and (max-width: 798px) {
+    main {
+        flex-direction: column;
+    }
+
+    main .kalkulator {
+        margin: 50px auto;
+    }
+
+    main .info {
+        margin: 0 auto;
+        width: 70%;
+        margin-bottom: 20px;
+    }
+}
+
+@media screen and (max-width: 659px) {
+    main .kalkulator{
+        width: 80%;
+    }
+    main .kalkulator h4 {
+        font-size: 1.7em;
+        margin-bottom: 20px;
+    }
+
+    main .kalkulator h4 span {
+        font-size: 1.9em;
+    }
+}
+
+@media screen and (max-width: 448px) {
+    main .kalkulator h4 {
+            font-size: 1.3em;
+            margin-bottom: 15px;
+        }
+    
+        main .kalkulator h4 span {
+            font-size: 1.6em;
+        }
+}
+
+@media screen and (max-width:392px) {
+    nav {
+        font-size: 12px;
+    }
+}

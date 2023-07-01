@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Kalkulator Suhu</title>
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <nav>
+      <div class="logo">Kalkulator Suhu</div>
+      <a href="https://instagram.com/s_achdiyy_" target="_blank">about me</a>
+    </nav>
+    <main>
+      <div class="kalkulator">
+        <h4>
+          <span>Hitung Suhu</span><br />
+          dengan mudah, tanpa menghitung!
+        </h4>
+        <div class="input-box">
+          <div class="sInput">
+            <div class="empty-box"></div>
+            <div class="dropdown">
+              <div class="list-d">
+                <button class="btn active">Celcius</button>
+                <button class="btn">Reaumure</button>
+                <button class="btn">Fahrenheit</button>
+                <button class="btn">Kelvin</button>
+                <span class="pointer">-</span>
+              </div>
+            </div>
+            <div class="input-value">
+              <div id="nInput">Celcius</div>
+              <input type="number" title="value" id="value" />
+            </div>
+          </div>
+          <div class="sOutput">
+            <div class="empty-box"></div>
+            <div class="dropdown">
+              <div class="list-d">
+                <button class="btn2 active">Reaumure</button>
+                <button class="btn2">Celcius</button>
+                <button class="btn2">Fahrenheit</button>
+                <button class="btn2">Kelvin</button>
+                <span class="pointer2">-</span>
+              </div>
+            </div>
+            <div class="input-value">
+              <div id="nOutput">Reaumure</div>
+              <input type="number" title="result" id="result" disabled />
+            </div>
+          </div>
+        </div>
+        <button id="hitung" type="button">hitung</button>
+      </div>
+      <div class="info">
+        <div class="title">Celcius -> Reaumure</div>
+        <h5>Rumus</h5>
+        <p>Re = 4/5 C</p>
+      </div>
+    </main>
+    <script src="script.js"></script>
+  </body>
+</html>
